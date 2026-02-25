@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>رَقِيـم الدواوين | الإمبراطورية المعرفية</title>
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #0a0a0a;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+        body {
+            background-color: var(--dark);
+            color: white;
+            font-family: 'Amiri', serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .matrix-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+            z-index: -1;
+        }
+        .bento-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .card {
+            background: var(--glass);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .hero { grid-column: span 2; grid-row: span 2; background: linear-gradient(45deg, #111, #1a1a1a); position: relative;}
+        .stat-card { grid-column: span 1; text-align: center; }
+        .stat-value { font-size: 2.5em; color: var(--gold); display: block; }
+        .live-map { grid-column: span 2; background: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg') no-repeat center; opacity: 0.3; }
+        .category-grid { grid-column: span 2; display: flex; justify-content: space-around; align-items: center; }
+        
+        h1 { color: var(--gold); text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+        .status-dot { width: 10px; height: 10px; background: #0f0; border-radius: 50%; display: inline-block; margin-left: 10px; box-shadow: 0 0 10px #0f0; }
+    </style>
+</head>
+<body>
+    <div class="matrix-bg"></div>
+    
+    <header style="text-align: center; padding: 40px;">
+        <h1>رَقِيـم الدواوين <div class="status-dot"></div></h1>
+        <p>السيادة الرقمية للتراث العربي العالمي</p>
+    </header>
+
+    <div class="bento-container">
+        <div class="card hero">
+            <h2 style="color: var(--gold);">🔮 العرّاف الذكي</h2>
+            <p>يتم الآن تحليل 30,000 مخطوطة بذكاء اصطناعي سيادي...</p>
+            <div style="position: absolute; bottom: 20px; left: 20px; right: 20px; background: rgba(0,0,0,0.5); padding: 10px; border-radius: 10px;">
+                💬 سأل باحث من أكسفورد: "ما هي فلسفة الطب عند الرازي؟"
+            </div>
+        </div>
+
+        <div class="card stat-card">
+            <span class="stat-value">10.2K</span>
+            <span>زائر حقيقي الآن 👥</span>
+        </div>
+
+        <div class="card stat-card">
+            <span class="stat-value">30K</span>
+            <span>ملف مُصفّى 📚</span>
+        </div>
+
+        <div class="card live-map">
+            <h3 style="margin: 0;">🌐 الانتشار العالمي</h3>
+            <p style="font-size: 0.8em;">نشاط مكثف الآن في: القاهرة، لندن، طوكيو، نيويورك</p>
+        </div>
+
+        <div class="card category-grid">
+            <div>🧪 الطب</div>
+            <div>📜 الشعر</div>
+            <div>🔭 الفلك</div>
+            <div>⚖️ الفلسفة</div>
+        </div>
+
+        <div class="card" style="grid-column: span 2; background: rgba(15, 255, 15, 0.05);">
+            <h3 style="margin: 0; color: #0f0;">💵 خزينة الإمبراطورية</h3>
+            <p>أرباح اليوم: +$1,250.00 | حالة النمو: 📈 15%</p>
+        </div>
+    </div>
+</body>
+</html>
